@@ -3,11 +3,21 @@ class Duplicate_remove
 {
   public String removeDups(String s)
 {
-    if ( s.length() <= 1 ) return s;
-    if( s.substring(1,2).equals(s.substring(0,1)) ) return removeDups(s.substring(1));
-    else return s.substring(0,1) + removeDups(s.substring(1));
+    if ( s.length() <= 1 ) 
+    {
+      return s;
+    }
+    if( s.substring(1,2).equals(s.substring(0,1)) ) 
+    {
+      return removeDups(s.substring(1));
+    }
+    else
+    {
+      return s.substring(0,1) + removeDups(s.substring(1));
+    }
 }  
-  public static void main(String[] args) {
+  public static void main(String[] args) 
+  {
     Duplicate_remove m=new Duplicate_remove();
     int n,i;
     String num;
